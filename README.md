@@ -1,1 +1,1 @@
-# mini-shope-react-project
+# Mini store - React project
