@@ -1,17 +1,21 @@
 .card {
+    display: flex;
+    flex-direction: column;
     border: 1px solid rgba(190, 183, 183, 0.402);
     padding: 10px;
+    justify-content: space-between;
 }
 
 .imgSectin {
     background-color: rgb(225, 227, 230);
-    height: 65%;
+    height: 60%;
     align-content: center;
+    box-shadow: var(--shadow);
 }
 
 .image {
     width: 80%;
-    height: 80%;
+    max-height: 80%;
     align-self: center;
     justify-self: center;
 }

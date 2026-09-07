@@ -1,3 +1,4 @@
+import { memo } from "react";
 import type { Product } from "../../types/product";
 
 interface CardProp {
@@ -5,8 +6,10 @@ interface CardProp {
     renderProduct: (product: Product) => void;
 }
 
-const ProductCard = ({ product, renderProduct }: CardProp) => {
+const ProductCard = memo(({ product, renderProduct }: CardProp) => {
     return <>{renderProduct(product)}</>;
-};
+});
+
+ProductCard.displayName = "ProductCard";
 
 export default ProductCard;

@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.searchInput {
+    height: 20px;
+    padding-inline: 5px;
+}
