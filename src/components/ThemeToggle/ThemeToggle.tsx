@@ -1,22 +1,12 @@
-import { useState } from "react";
-
-interface Theme {
-    theme: "light" | "dark";
-    themeToggle: () => void;
-}
+import useTheme from "../../context/ThemeContext";
 
 const ThemeToggle = () => {
-    const [theme, setTheme] = useState<Theme["theme"]>("light");
-    const themeToggle = () => {
-        setTheme((prev) => (prev === "light" ? "dark" : "light"));
-        document.body.classList.toggle("dark");
-    };
+    const { theme, toggleTheme } = useTheme();
+
     return (
-        <>
-            <button onClick={themeToggle}>
-                {theme === "light" ? "☀️" : "🌙"}
-            </button>
-        </>
+        <button onClick={toggleTheme} style={{ cursor: "pointer" }}>
+            {theme === "light" ? "🌙" : "☀️"}
+        </button>
     );
 };
 

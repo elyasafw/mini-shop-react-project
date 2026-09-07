@@ -1,11 +1,13 @@
-import styles from "./Footer.module.css"
+import styles from "./Footer.module.css";
 
 const Footer = () => {
     return (
         <footer className={styles.container}>
             <p>
-                © Mini shop {new Date().getFullYear()} &bull; All
-                rights reserved
+                <b>
+                    © Mini shop {new Date().getFullYear()} &bull; All rights
+                    reserved
+                </b>
             </p>
         </footer>
     );
