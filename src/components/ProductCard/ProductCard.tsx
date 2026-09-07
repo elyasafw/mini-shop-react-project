@@ -1,15 +1,13 @@
-import { memo } from "react";
+import { memo, type ReactNode } from "react";
 import type { Product } from "../../types/product";
 
 interface CardProp {
     product: Product;
-    renderProduct: (product: Product) => void;
+    renderProduct: (product: Product) => ReactNode;
 }
 
 const ProductCard = memo(({ product, renderProduct }: CardProp) => {
     return <>{renderProduct(product)}</>;
 });
-
-ProductCard.displayName = "ProductCard";
 
 export default ProductCard;

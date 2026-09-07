@@ -1,10 +1,11 @@
+import type { ReactNode } from "react";
 import type { Product } from "../../types/product";
 import ProductCard from "../ProductCard/ProductCard";
 import styles from "./ProductsList.module.css"
 
 interface ListProp {
     products: Product[];
-    renderProduct: (product: Product) => void;
+    renderProduct: (product: Product) => ReactNode;
 }
 
 const ProductsList = ({ products, renderProduct }: ListProp) => {
