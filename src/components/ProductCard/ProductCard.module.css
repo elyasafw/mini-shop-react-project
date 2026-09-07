@@ -1,0 +1,31 @@
+.card {
+    border: 1px solid rgba(190, 183, 183, 0.402);
+    padding: 10px;
+}
+
+.imgSectin {
+    background-color: rgb(225, 227, 230);
+    height: 65%;
+    align-content: center;
+}
+
+.image {
+    width: 80%;
+    height: 80%;
+    align-self: center;
+    justify-self: center;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 10px;
+}
+
+.title {
+    grid-column: 1 / -1;
+}
+
+.price {
+    color: rgb(32, 178, 129);
+}
