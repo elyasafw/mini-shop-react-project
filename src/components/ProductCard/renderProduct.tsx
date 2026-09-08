@@ -13,7 +13,10 @@ export type ProductRenderer = (
     ctx: RenderContext,
 ) => ReactNode;
 
-export const renderProduct: ProductRenderer = (product, { isFavorite, onToggle }) => {
+export const renderProduct: ProductRenderer = (
+    product,
+    { isFavorite, onToggle },
+) => {
     return (
         <article className={styles.card}>
             <section className={styles.imgSectin}>
@@ -25,10 +28,8 @@ export const renderProduct: ProductRenderer = (product, { isFavorite, onToggle }
                     />
                 </Link>
             </section>
-            <h4 className={styles.title}>
-                {product.title.length > 20
-                    ? product.title.slice(0, 20) + " ..."
-                    : product.title}
+            <h4 title={product.title} className={styles.title}>
+                {product.title}
             </h4>
             <section className={styles.content}>
                 <p className={styles.price}>
@@ -57,10 +58,8 @@ export const renderFavorite: ProductRenderer = (product, { onToggle }) => {
                     />
                 </Link>
             </section>
-            <h4 className={styles.title}>
-                {product.title.length > 20
-                    ? product.title.slice(0, 20) + " ..."
-                    : product.title}
+            <h4 title={product.title} className={styles.title}>
+                {product.title}
             </h4>
             <section className={styles.content}>
                 <p className={styles.price}>

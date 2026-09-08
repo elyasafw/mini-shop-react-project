@@ -9,6 +9,11 @@
     background-color: var(--bg);
 }
 
+.logo {
+    width: 50px;
+    margin-right: 10px;
+}
+
 .deactivateNavLink {
     margin-inline: 20px;
     text-decoration: none;

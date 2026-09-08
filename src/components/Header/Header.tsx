@@ -5,7 +5,10 @@ import styles from "./Header.module.css";
 const Header = () => {
     return (
         <header className={styles.container}>
-            <h3>Mini Shop</h3>
+            <h3>
+                <img className={styles.logo} src="../../../public/shopping-logo.png" alt="logo" />
+                Mini Shop
+            </h3>
             <nav>
                 <NavLink
                     className={({ isActive }) =>
