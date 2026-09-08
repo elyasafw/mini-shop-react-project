@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Link } from "react-router-dom";
 import type { Product } from "../../types/product";
 import styles from "./ProductCard.module.css";
 
@@ -6,11 +7,13 @@ const renderProduct = (product: Product): ReactNode => {
     return (
         <article className={styles.card}>
             <section className={styles.imgSectin}>
-                <img
-                    className={styles.image}
-                    src={product.image}
-                    alt={`${product.title} image`}
-                />
+                <Link to={`products/${product.id}`}>
+                    <img
+                        className={styles.image}
+                        src={product.image}
+                        alt={`${product.title} image`}
+                    />
+                </Link>
             </section>
             <h4 className={styles.title}>
                 {product.title.length > 20
@@ -19,7 +22,7 @@ const renderProduct = (product: Product): ReactNode => {
             </h4>
             <section className={styles.content}>
                 <p className={styles.price}>
-                    <b>{product.price} $</b>
+                    <b>$ {product.price}</b>
                 </p>
                 <button>🤍</button>
             </section>

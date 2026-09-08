@@ -2,10 +2,8 @@ import { useMemo, useState } from "react";
 import ProductsList from "../components/ProductsList/ProductsList";
 import renderProduct from "../components/ProductCard/renderProduct";
 import SearchBar from "../components/SearchBar/SearchBar";
-import useFetch from "../hooks/useFetch";
+import useFetch, { API } from "../hooks/useFetch";
 import type { Product } from "../types/product";
-
-const API = "https://fakestoreapi.com/products";
 
 const HomePage = () => {
     const { data: products, loading, error } = useFetch<Product[]>(API);

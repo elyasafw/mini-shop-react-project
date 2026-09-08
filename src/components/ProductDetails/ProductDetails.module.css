@@ -1,0 +1,47 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 48%));
+    justify-content: space-between;
+}
+
+.imgSection {
+    height: 522px;
+    border: 1px solid rgba(190, 183, 183, 0.402);
+    background-color: rgb(225, 227, 230);
+    align-content: center;
+}
+
+.img {
+    width: 80%;
+    max-height: 80%;
+    align-self: center;
+    justify-self: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.categoryTag {
+    border: 1px solid rgb(32, 178, 129);
+    padding: 5px;
+    padding-inline: 15px;
+    color: rgb(32, 178, 129);
+}
+
+.desc {
+    text-align: justify;
+}
+
+.price {
+    color: rgb(32, 178, 129);
+}
+
+.btns {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}

@@ -7,6 +7,8 @@ type Response<T> = {
     setData: () => void;
 };
 
+export const API = "https://fakestoreapi.com/products";
+
 const useFetch = <T>(api: string): Response<T> => {
     const [data, setData] = useState<T | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
