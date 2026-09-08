@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
+import { renderProduct } from "../components/ProductCard/renderProduct";
 import ProductsList from "../components/ProductsList/ProductsList";
-import renderProduct from "../components/ProductCard/renderProduct";
 import SearchBar from "../components/SearchBar/SearchBar";
 import useFetch, { API } from "../hooks/useFetch";
 import type { Product } from "../types/product";
@@ -25,14 +25,25 @@ const HomePage = () => {
 
     return (
         <>
-            <div style={{display: "flex", alignContent: "center", justifyContent: "space-between"}}>
+            <div
+                style={{
+                    display: "flex",
+                    alignContent: "center",
+                    justifyContent: "space-between",
+                    flexWrap: "wrap"
+                }}
+            >
                 <h1>Products</h1>
                 <SearchBar setFilter={setFilter} />
             </div>
-            <ProductsList
-                products={currentProductsList}
-                renderProduct={renderProduct}
-            />
+            {currentProductsList.length > 0 ? (
+                <ProductsList
+                    products={currentProductsList}
+                    renderProduct={renderProduct}
+                />
+            ) : (
+                <p>No matching search results found ...</p>
+            )}
         </>
     );
 };

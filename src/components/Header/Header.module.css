@@ -1,7 +1,7 @@
 .container {
+    height: 80px;
     display: flex;
-    justify-content: space-between;
-    padding-inline: 20px;
+    justify-content: space-around;
     border-bottom: 0.5px solid var(--border);
     align-items: center;
     position: sticky;

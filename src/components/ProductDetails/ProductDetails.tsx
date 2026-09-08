@@ -1,9 +1,14 @@
 import { useNavigate } from "react-router-dom";
+import UseFavorites from "../../store/favoritesStore";
 import type { Product } from "../../types/product";
 import styles from "./ProductDetails.module.css";
 
 const ProductDetails = ({ product }: { product: Product }) => {
     const navigate = useNavigate();
+    const isFavorite = UseFavorites((s) =>
+        s.favoritesProducts.some((p) => p.id === product.id),
+    );
+    const toggleFavorites = UseFavorites((s) => s.toggleFavorites);
     return (
         <article className={styles.container}>
             <section className={styles.imgSection}>
@@ -23,9 +28,11 @@ const ProductDetails = ({ product }: { product: Product }) => {
                 </h1>
                 <p className={styles.desc}>{product.description}</p>
                 <div className={styles.btns}>
-                    <button>Add to favorites</button>
+                    <button onClick={() => toggleFavorites(product)}>
+                        {isFavorite ? "♥ Remove from favorites" : "♡ Add to favorites"}
+                    </button>
                     <button onClick={() => navigate(-1)}>
-                        Back to products
+                        → Back to products
                     </button>
                 </div>
             </section>
