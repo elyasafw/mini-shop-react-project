@@ -13,8 +13,9 @@ const UseFavorites = create<FavoritesState>()(
             favoritesProducts: [],
             toggleFavorites: (product) =>
                 set((state) => {
-                    const isFavorite =
-                        state.favoritesProducts.includes(product);
+                    const isFavorite = state.favoritesProducts.some(
+                        (p) => p.id === product.id,
+                    );
 
                     if (isFavorite) {
                         return {

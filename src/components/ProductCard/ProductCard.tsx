@@ -14,7 +14,9 @@ const ProductCard = memo(({ product, renderProduct }: CardProp) => {
     );
     const toggleFavorites = UseFavorites((s) => s.toggleFavorites);
 
-    return <>{renderProduct(product, { isFavorite, onToggle: toggleFavorites })}</>;
+    return (
+        <>{renderProduct(product, { isFavorite, onToggle: toggleFavorites })}</>
+    );
 });
 
 export default ProductCard;

@@ -11,6 +11,7 @@
     height: 65%;
     align-content: center;
     box-shadow: var(--shadow);
+    text-decoration: none;
 }
 
 .image {
@@ -41,5 +42,5 @@
     font-size: 15px;
     top: 40;
     margin: 0;
-    position: fixed;
+    text-align: start;
 }

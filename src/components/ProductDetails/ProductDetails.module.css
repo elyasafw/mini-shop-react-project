@@ -41,12 +41,12 @@
     color: rgb(32, 178, 129);
 }
 
-.btns {
+.btnsContainer {
     margin-top: 30px;
     display: flex;
     gap: 15px;
 }
 
-button {
+.btns {
     padding: 10px;
 }

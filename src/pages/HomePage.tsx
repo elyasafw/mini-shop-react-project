@@ -30,13 +30,13 @@ const HomePage = () => {
                     display: "flex",
                     alignContent: "center",
                     justifyContent: "space-between",
-                    flexWrap: "wrap"
+                    flexWrap: "wrap",
                 }}
             >
                 <h1>Products</h1>
                 <SearchBar setFilter={setFilter} />
             </div>
-            {currentProductsList.length > 0 ? (
+            {currentProductsList && currentProductsList.length > 0 ? (
                 <ProductsList
                     products={currentProductsList}
                     renderProduct={renderProduct}

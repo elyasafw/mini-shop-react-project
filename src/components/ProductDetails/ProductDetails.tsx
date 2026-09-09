@@ -27,11 +27,19 @@ const ProductDetails = ({ product }: { product: Product }) => {
                     <b>$ {product.price}</b>
                 </h1>
                 <p className={styles.desc}>{product.description}</p>
-                <div className={styles.btns}>
-                    <button onClick={() => toggleFavorites(product)}>
-                        {isFavorite ? "♥ Remove from favorites" : "♡ Add to favorites"}
+                <div className={styles.btnsContainer}>
+                    <button
+                        className={styles.btns}
+                        onClick={() => toggleFavorites(product)}
+                    >
+                        {isFavorite
+                            ? "♥ Remove from favorites"
+                            : "♡ Add to favorites"}
                     </button>
-                    <button onClick={() => navigate(-1)}>
+                    <button
+                        className={styles.btns}
+                        onClick={() => navigate(-1)}
+                    >
                         → Back to products
                     </button>
                 </div>

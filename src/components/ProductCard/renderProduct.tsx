@@ -19,15 +19,13 @@ export const renderProduct: ProductRenderer = (
 ) => {
     return (
         <article className={styles.card}>
-            <section className={styles.imgSectin}>
-                <Link to={`products/${product.id}`}>
-                    <img
-                        className={styles.image}
-                        src={product.image}
-                        alt={`${product.title} image`}
-                    />
-                </Link>
-            </section>
+            <Link className={styles.imgSectin} to={`products/${product.id}`}>
+                <img
+                    className={styles.image}
+                    src={product.image}
+                    alt={`${product.title} image`}
+                />
+            </Link>
             <h4 title={product.title} className={styles.title}>
                 {product.title}
             </h4>
@@ -46,18 +44,16 @@ export const renderProduct: ProductRenderer = (
 export const renderFavorite: ProductRenderer = (product, { onToggle }) => {
     return (
         <article className={styles.card}>
-            <span className={styles.favoriteTag}>
-                <h2>❤️</h2>
-            </span>
-            <section className={styles.imgSectin}>
-                <Link to={`/products/${product.id}`}>
-                    <img
-                        className={styles.image}
-                        src={product.image}
-                        alt={`${product.title} image`}
-                    />
-                </Link>
-            </section>
+            <Link className={styles.imgSectin} to={`/products/${product.id}`}>
+                <span className={styles.favoriteTag}>
+                    <h2>❤️</h2>
+                </span>
+                <img
+                    className={styles.image}
+                    src={product.image}
+                    alt={`${product.title} image`}
+                />
+            </Link>
             <h4 title={product.title} className={styles.title}>
                 {product.title}
             </h4>
